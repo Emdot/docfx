@@ -7,7 +7,7 @@ C# Coding Standards
 
 Introduction
 ----------------
-The C# Coding Standards will be used in conjunction with customized versions of *StyleCop* and *FxCop* [**TODO**] during both development and build process. This will help ensure that all developers on the team are in a consistent manner.
+The C# Coding Standards will be used in conjunction with customized versions of *StyleCop* and *FxCop* [**TODO**] during both development and build process. This will help ensure that the code is stylistically consistent.
 
 >"Any fool can write code that a computer can understand. Good programmers write code that humans understand".
 >
@@ -33,7 +33,7 @@ Tools
 Highlights of Coding Standards
 ------------------------------
 
-This section is not intended to give a summary of all the coding standards enabled by our customized StyleCop, but to give a highlight of some rules one will possibly meet in daily coding life. It also provides some coding standards that are recommended but not mandatory (that is, not enabled by StyleCop).
+This section is not intended to give a summary of all the coding standards enabled by our customized StyleCop, but to give a highlight of some rules one will possibly meet in daily coding life. It also provides some coding standards that are recommended but not mandatory (that is, not enforced by StyleCop).
 
 ### File Layout (Recommended)
 Only one public class is allowed per file.
@@ -47,7 +47,7 @@ The file name derives from the class name.
 
 The class definition contains class members in the following order, from *less* restricted scope (public) to *more* restrictive (private):
 
-* ~~~ Nested types, e.g. classes, enum, struct, etc.~~~ Non-private nested types are not allowed.
+* ~~~ Nested types, e.g. classes, enums, structs, etc.~~~ Non-private nested types are not allowed.
 * Field members (for example, member variables, const, etc.)
 * Member functions
   * Constructors
@@ -66,7 +66,7 @@ The class definition contains class members in the following order, from *less* 
 
   > **Note**
   >
-  > A special case is made for two-letter acronyms in which both letters are capitalized, e.g. *IOStream*
+  > A special case is made for two-letter acronyms in which both letters are capitalized, e.g. `IOStream`
 
 * **DO** use camelCasing for parameter names.
 
@@ -76,21 +76,27 @@ The class definition contains class members in the following order, from *less* 
 
 * **DO** start with underscore for private fields:
 
-    private readonly Guid _userId = Guid.NewGuid();
+```cs
+private readonly Guid _userId = Guid.NewGuid();
+```
 
-* **DO** start static readonly field and constant names with capitalized case
+* **DO** start `static readonly` field and constant names with a capitalized letter
 
+```cs
     private static readonly IEntityAccessor EntityAccessor = null;
-        private const string MetadataName = "MetadataName";
+    private const string MetadataName = "MetadataName";
+```
 
 * **DO NOT** capitalize each word in so-called [closed-form compound words](http://msdn.microsoft.com/en-us/library/ms229043.aspx).
 
 * **DO** use `Async` suffix in the asynchronous method names to notice people how to use it properly
 
-      public async Task<string> LoadContentAsync() { ... }
+```cs
+   public async Task<string> LoadContentAsync() { /* ... */ }
+```
 
 ### Formatting (Mandatory)
-* **DO** use spaces over tabs, and always show all spaces/tabs in IDE
+* **DO** use spaces instead of tabs, and always show all spaces/tabs in IDE
 
 > **Tips**
 >
@@ -98,14 +104,16 @@ The class definition contains class members in the following order, from *less* 
 >
   > Visual Studio > Edit > Advanced > View White Space (Ctrl+R, Ctrl+W)
 
-* **DO** add *using* inside *namespace* declaration
+* **DO** add `using` inside `namespace` declaration
 
+```cs
     namespace Microsoft.Content.Build.BuildWorker.UnitTest
     {
       using System;
     }
+```
 
-* **DO** add a space when:
+* **DO** add spaces as shown here:
   1. `for (var i = 0; i < 1; i++)`
   2. `if (a == b)`
 
@@ -140,24 +148,20 @@ The functional tests for the `Microsoft.Foo` assembly live in the `Microsoft.Foo
 In general there should be exactly one unit tests assembly for each product runtime assembly. In general there should be one functional tests assembly per repo. Exceptions can be made for both.
 
 #### Unit test class naming
-Test class names end with `Test` suffix and live in the same namespace as the class being tested. For example, the unit tests for the `Microsoft.Foo.Boo` class would be in a `Microsoft.Foo.BooTest` class in the unit tests assembly `Microsoft.Foo.Tests`.
+For a class `Microsoft.SomeNamespace.MyClass`, the unit tests live in class `Microsoft.SomeNamespace.Tests.MyClassTest`.
 
 #### Unit test method naming
 Unit test method names must be descriptive about *what developers are testing, under what conditions, and what the expectations are*. Pascal casing and underscores can be used to improve readability. The following test names are correct:
 
-```cs
-PublicApiArgumentsShouldHaveNotNullAnnotation
-Public_api_arguments_should_have_not_null_annotation
-```
+    PublicApiArgumentsShouldHaveNotNullAnnotation
+    Public\_api\_arguments\_should\_have\_not\_null\_annotation
 
 The following test names are incorrect:
 
-```cs
-Test1
-Constructor
-FormatString
-GetData
-```
+    Test1
+    Constructor
+    FormatString
+    GetData
 
 #### Unit test structure
 The contents of every unit test should be split into three distinct stages (arrange, act and assert), optionally separated by these comments:

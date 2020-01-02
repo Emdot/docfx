@@ -7,7 +7,7 @@
 
 ## What is it
 
-*DocFX* makes it extremely easy to generate your developer hub with API reference, landing page, and how-to.
+*DocFX* makes it extremely easy to generate your developer hub with an API reference, a landing page, and how-tos.
 
 ## What's next
 
@@ -18,15 +18,15 @@ Check out the road map of DocFX [here](Roadmap.md).
 
 ## How to use
 
-- Option 1: install DocFX through [chocolatey package](https://chocolatey.org/packages/docfx): `choco install docfx -y`.
-- Option 2: install DocFX through nuget package: `nuget install docfx.console`, `docfx.exe` is under folder *docfx.console/tools/*.
-- Option 3: play DocFX inside Visual Studio: create a **Class Library (.NET Framework)** project, **Manage Nuget Packages** to install `docfx.console` nuget package on the project, **Build** to create the generated website under folder `_site`.
+- Option 1: install DocFX through the [chocolatey package](https://chocolatey.org/packages/docfx): `choco install docfx -y`.
+- Option 2: install DocFX through the nuget package: `nuget install docfx.console`, `docfx.exe` is under folder *docfx.console/tools/*.
+- Option 3: run DocFX inside Visual Studio: create a **Class Library (.NET Framework)** project, use **Manage Nuget Packages** to install `docfx.console` nuget package on the project, **Build** to create the generated website under folder `_site`.
 
 For more information, please refer to [Getting Started](http://dotnet.github.io/docfx/tutorial/docfx_getting_started.html).
 
 ## How to Contribute
 
-For new comers, you can start with issues with **[`help-wanted`](https://github.com/dotnet/docfx/labels/help-wanted)**. Check out the [contributing](.github/CONTRIBUTING.md) page to see the best places to log issues and start discussions.
+For newcomers, you can start with issues labeled **[`help-wanted`](https://github.com/dotnet/docfx/labels/help-wanted)**. Check out the [contributing](.github/CONTRIBUTING.md) page to see the best places to log issues and start discussions.
 
 This project has adopted the code of conduct defined by the [Contributor Covenant](http://contributor-covenant.org/) to clarify expected behavior in our community.
 For more information see the [.NET Foundation Code of Conduct](http://www.dotnetfoundation.org/code-of-conduct).
@@ -47,7 +47,7 @@ For more information see the [.NET Foundation Code of Conduct](http://www.dotnet
 
 #### Prerequisites
 
-1. [Visual Studio 2017](https://www.visualstudio.com/vs/) with *.NET Core cross-platform development* toolset
+1. [Visual Studio 2017](https://www.visualstudio.com/vs/) with the *.NET Core cross-platform development* toolset
 2. [Node.js](https://nodejs.org)
 
 #### Steps

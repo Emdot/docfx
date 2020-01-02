@@ -1,1 +1,1 @@
-Documentation project uses *docfx.console* nuget package to generate documentation for *docfx* project, along with conceputal files, with `docfx.json` to provide configuration for *docfx*.
+Tge Documentation project uses *docfx.console* nuget package to generate documentation for the *docfx* project, along with conceputal files, with `docfx.json` to provide configuration for *docfx*.

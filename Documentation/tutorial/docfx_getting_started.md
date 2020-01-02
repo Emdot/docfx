@@ -3,12 +3,12 @@ Getting Started with *DocFX*
 
 ## 1. What is *DocFX*
 
-*DocFX* is an API documentation generator for .NET, which currently supports C#, VB and F#.
+*DocFX* is an API documentation generator for .NET that currently supports C#, VB and F#.
 It generates API reference documentation from triple-slash comments in your source code.
 It also allows you to use Markdown files to create additional topics such as tutorials and how-tos, and to customize the generated reference documentation.
 *DocFX* builds a static HTML website from your source code and Markdown files, which can be easily hosted on any web server (for example, *github.io*).
 Also, *DocFX* provides you the flexibility to customize the layout and style of your website through templates.
-If you are interested in creating your own website with your own styles, you can follow [how to create custom template](howto_create_custom_template.md) to create custom templates.
+If you are interested in creating your own website with your own styles, you can follow [How to Create a Custom Template](howto_create_custom_template.md).
 
 *DocFX* also has the following cool features:
 
@@ -115,9 +115,9 @@ Here is a seed project: https://github.com/docascode/docfx-seed. It contains
 
 1. A basic C# project under `src`.
 2. Several conceptual files under `articles`.
-3. An overwrite file to add extra content to API under `specs`.
-4. `toc.yml` under root folder. It renders as the navbar of the website.
-5. `docfx.json` under root folder. It is the configuration file that `docfx` depends upon.
+3. An overwrite file to add extra content to the API under `specs`.
+4. `toc.yml` under the root folder. It renders as the navbar of the website.
+5. `docfx.json` under the root folder. It is the configuration file that `docfx` depends upon.
 
 > [!Tip]
 > It's good practice to separate files with different types into different folders.

@@ -1,6 +1,6 @@
 # Validate your Markdown files
 
-In Markdown, it is possible to write any type of content, as long as the used syntax is valid. For example, Markdown supports the direct use of HTML tags - one can use the `<h1>title</h1>` syntax instead of conventional Markdown, such as `#title`.
+In Markdown, it is possible to write any type of content, as long as the syntax used is valid. For example, Markdown supports the direct use of HTML tags --- one can use the `<h1>title</h1>` syntax instead of conventional Markdown, such as `#title`.
 
 With full-fledged HTML support, some behaviors might not be desirable. For example, you may not want to allow `<script>` tags included in Markdown, as that can introduce arbitrary JavaScript into documentation.
 
@@ -17,7 +17,7 @@ There are three kinds of validation rules provided by DocFX:
 
 ## HTML tag validation rules
 
-In most cases, there is a need to limit the use of specific HTML tags in Markdown files. This is helpful in ensuring that the content is consistent and follows a documentation standard that is applicable to your project or organization.
+In many cases, there is a need to limit the use of specific HTML tags in Markdown files. This is helpful in ensuring that the content is consistent and follows a documentation standard that is applicable to your project or organization.
 
 To define a new HTML tag rule, create a `md.style` file with content similar to the snippet below:
 
@@ -166,7 +166,7 @@ To enable this rule, update your `md.style` with the following rule flag:
 }
 ```
 
-Follow the steps in [How to enable custom HTML tag rules](#how-to-enable-custom-html-tag-rules) to configure the plugin and run `docfx` in the project folder. You'll see your rule picked up by the build.
+Follow the steps in [How to enable custom HTML tag rules](#creating-a-custom-HTML-tag-rule) to configure the plugin and run `docfx` in the project folder. You'll see your rule picked up by the build.
 
 ### Logging in your rules
 
@@ -183,7 +183,7 @@ The difference between `LogError` and throwing `DocumentException` is in the fac
 
 In certain cases, we might need to validate tokens with the file context. For example, it might be necessary to enforce a rule that ensures that each topic has one title (i.e. H1 written in standard Markdown syntax, e.g. `# <title>`).
 
-You can't directly count the tokens with @Microsoft.DocAsCode.MarkdownLite.IMarkdownTokenValidator since the context is shared by all files - the rule will never be hit when there is no heading in a file.
+You can't directly count the tokens with @Microsoft.DocAsCode.MarkdownLite.IMarkdownTokenValidator since the context is shared by all files --- the rule will never be hit when there is no heading in a file.
 
 We can create a custom validator as such:
 

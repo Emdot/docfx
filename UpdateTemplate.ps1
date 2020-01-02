@@ -2,7 +2,7 @@ $ErrorActionPreference = "Stop"
 
 # Check if node exists globally
 if (-not (Get-Command "node" -ErrorAction SilentlyContinue)) {
-    Write-Host "ERROR: UpdateTemplate.sh requires node installed globally."
+    Write-Host "ERROR: UpdateTemplate.ps1 requires node installed globally."
     exit 1
 }
 
